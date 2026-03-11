@@ -1,41 +1,106 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/FdVrU54p)
-# [Project Title — e.g., Hospital Admission Records Analysis]
+# Project Title — Hospital Admission Records Analysis
 
-> **Lab 1 starter repo** — Replace the heading above with your project title. Team member names are not part of the lab — they go in Section 2 of your completed README in the integration task.
+## Team Members
+    1- Bashar Albdour
+    2- Rayan Albdour
+    3- Ahmed Saleh
 
 ---
 
 ## Project Overview
 
-TODO: Write 2–3 sentences describing what this project does and who it is for.
+This project sets up the development environment for the hospital admission data analysis project.  
+It defines the required dependencies and configuration so that all team members can reproduce the same Python environment.  
+The setup ensures that the project can run correctly before data analysis begins.
+
+---
+## Data Source
+Data is not tracked in this repository. See the setup instructions below for how to obtain and place the data files before running any analysis:
+
+ Before running analysis, datasets should be placed locally in the following directory:
+ `data/raw/admissions.csv`
+
+ Raw datasets must never be committed to the repository.
 
 ---
 
 ## Setup Instructions
 
-TODO: Complete these setup steps after creating your `requirements.txt`:
+Complete these setup steps to setup : 
 
-```bash
-python -m venv .venv
+1-Clone the repository:
+    `git clone <repo-url>`
+    `cd <repo-name>`
 
-# Activate — choose the command for your OS:
-# Mac / Linux:      source .venv/bin/activate
-# Windows Git Bash: source .venv/Scripts/activate
-# Windows CMD:      .venv\Scripts\activate.bat
-# Windows PowerShell: .venv\Scripts\Activate.ps1
+2-Create the Python virtual environment:
+    `python -m venv .venv`
 
-pip install -r requirements.txt
-python test_environment.py    # should print "Environment OK"
-```
+3- Activate the environment depending on your platform:
+
+Mac / Linux
+`source .venv/bin/activate`
+
+Windows Git Bash
+`source .venv/Scripts/activate`
+
+Windows CMD
+`.venv\Scripts\activate.bat`
+
+Windows PowerShell
+`.venv\Scripts\Activate.ps1`
+
+## Install project dependencies:
+
+`pip install -r requirements.txt`
+
+## Verify that the environment works correctly:
+
+`python test_environment.py`
+    Expected output:
+    `Environment OK` 
+
+## You can also run the automated setup script:
+
+`./setup.sh`
+
+Expected output:
+`Setup complete.`
+
+---
+## Project Structure
+m1-l1-git-workflows-BasharAlbdour/ 
+│ 
+├── .github/ `GitHub configuration files `
+├── .venv/ # `Local Python virtual environment (not tracked) `
+├── tests/ # `Automated test files` 
+│ 
+├── .gitignore # `Files ignored by Git` 
+├── AGENTS.md # `AI contribution policy ` 
+├── CHANGELOG.md # `Project change history `
+├── README.md # `Project documentation `
+│ 
+├── requirements.txt # `Python dependencies` 
+├── setup.sh # `Automated environment setup script`
+└── test_environment.py # `Script to validate environment configuration`
 
 ---
 
 ## Contributing
 
-- Branch naming: `setup/`, `feature/`, `fix/`
-- Open a PR to `main` for all changes
-- Commit messages: imperative mood, ≤ 50 characters
+Branch naming conventions:
 
----
+feature/<description> 
+fix/<description> 
+setup/<description>
 
-*Starter file for Lab 1 — lab-1-git-workflows | aispire-14005*
+Contribution workflow:
+
+1-Create a new branch from main
+2-Implement the change
+3-Run the environment validation
+4-Commit changes with clear messages
+5-Open a Pull Request for review
+
+
+On Windows systems, `setup.sh` should be executed using Git Bash, since it does not run directly in CMD or PowerShell.
+
